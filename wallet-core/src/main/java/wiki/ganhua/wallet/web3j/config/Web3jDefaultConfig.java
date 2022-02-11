@@ -1,27 +1,29 @@
 package wiki.ganhua.wallet.web3j.config;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author Ganhua
  * @date 2022/2/9
  */
-public class Web3jDefaultConfigImpl implements Serializable {
+@Data
+public class Web3jDefaultConfig implements Serializable {
 
     private static final long serialVersionUID = -7911762880759414013L;
 
-    protected volatile ChainType eth;
-
-
+    protected transient ChainType eth = new ChainType(List.of("https://ethmainnet.pentoken.io"),1L,60);
 
     @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     private static class ChainType{
         /**
          * rpcUrl
          */
-        private String rpcUrl;
+        private List<String> rpcUrl;
 
         /**
          * 该链ID可通过 ethChainId 方法获取 避免失败 手动传入

@@ -1,0 +1,13 @@
+web3j:
+  eth:
+    rpc-url:
+      - https://ethmainnet.pentoken.io
+      - https://api.edennetwork.io/v1/rpc
+    chain-id: 1
+    child-number: 60
+  bnb:
+    rpc-url:
+      - https://bsc-dataseed1.binance.org
+      - https://api.edennetwork.io/v1/rpc
+    chain-id: 56
+    child-number: 714

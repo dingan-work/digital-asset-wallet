@@ -1,13 +1,13 @@
 package wiki.ganhua.wallet.web3j;
 
 import com.google.common.collect.ImmutableList;
+import wiki.ganhua.exception.AddressException;
+import wiki.ganhua.service.WalletService;
 import org.bitcoinj.crypto.*;
 import org.bitcoinj.wallet.DeterministicSeed;
 import org.web3j.crypto.ECKeyPair;
 import org.web3j.crypto.Keys;
 import wiki.ganhua.bean.WalletResult;
-import wiki.ganhua.exception.AddressException;
-import wiki.ganhua.service.WalletService;
 
 import java.security.SecureRandom;
 import java.util.List;
@@ -23,7 +23,9 @@ public abstract class BaseWeb3jService implements WalletService {
     /**
      * 根据币种配置信息创建钱包
      */
-    protected WalletResult createWallet(ImmutableList<ChildNumber> bipPath){
+    protected WalletResult createWallet(int childNumber){
+        ImmutableList<ChildNumber> bipPath = ImmutableList.of(new ChildNumber(44, true), new ChildNumber(childNumber, true),
+                ChildNumber.ZERO_HARDENED, ChildNumber.ZERO);
         SecureRandom secureRandom = new SecureRandom();
         byte[] entropy = new byte[DeterministicSeed.DEFAULT_SEED_ENTROPY_BITS / 8];
         secureRandom.nextBytes(entropy);
