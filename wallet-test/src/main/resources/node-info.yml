@@ -11,3 +11,8 @@ web3j:
       - https://api.edennetwork.io/v1/rpc
     chain-id: 56
     child-number: 714
+solana:
+  rpc-url:
+    - https://solana.maiziqianbao.net
+    - https://api.mainnet-beta.solana.com
+

@@ -18,11 +18,17 @@
         <maven.compiler.target>11</maven.compiler.target>
         <okhttp3.version>4.9.1</okhttp3.version>
         <spring-boot.version>2.5.7</spring-boot.version>
-        <hutool-version>5.7.11</hutool-version>
+        <hutool-version>5.7.21</hutool-version>
         <fastjson.version>1.2.76</fastjson.version>
+        <okhttps.version>3.4.2</okhttps.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -136,6 +142,11 @@
         <artifactId>okhttp</artifactId>
         <version>${okhttp3.version}</version>
     </dependency>
+        <dependency>
+            <groupId>com.ejlchina</groupId>
+            <artifactId>okhttps-fastjson</artifactId>
+            <version>${okhttps.version}</version>
+        </dependency>
     </dependencies>
     </dependencyManagement>
 

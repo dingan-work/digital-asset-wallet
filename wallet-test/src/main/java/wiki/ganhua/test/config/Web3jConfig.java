@@ -9,16 +9,20 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+import static wiki.ganhua.test.config.Web3jConfig.WEB3J;
+
 /**
  * @author Ganhua
  * @date 2022/2/11
  */
 
 @Component
-@PropertySource(value = "classpath:web3j-info.yml")
-@ConfigurationProperties(prefix = "web3j")
+@PropertySource(value = "classpath:node-info.yml")
+@ConfigurationProperties(prefix = WEB3J)
 @Data
 public class Web3jConfig {
+
+    public static final String WEB3J = "web3j";
 
     private ChainType eth;
 

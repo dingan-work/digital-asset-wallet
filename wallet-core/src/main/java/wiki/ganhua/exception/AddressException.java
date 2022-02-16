@@ -10,6 +10,8 @@ import wiki.ganhua.exception.base.BaseException;
  */
 public class AddressException extends BaseException {
 
+    private static final long serialVersionUID = -760873254440395496L;
+
     public AddressException(String message){
         super("address error",message);
     }

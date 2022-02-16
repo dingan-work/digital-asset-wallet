@@ -14,20 +14,22 @@ import java.math.BigDecimal;
 public interface WalletService {
 
     /**
-     * 获取/创建钱包地址
+     * get create wallet address
+     * all wallet addresses can be created using the same mnemonic and different secret keys,
+     * and the private key can be recovered later through the secret key and mnemonic.
      * @return 钱包私钥与地址 wallet private key and address
      */
     WalletResult createWalletAddress();
 
     /**
-     * 查询地址余额
+     * get address balance
      * @param address 钱包地址
      * @return 地址的余额 The balance of the address
      */
     BigDecimal getBalance(String address);
 
     /**
-     * 发送交易
+     * send transaction
      * @param to 接收地址
      * @param amount 发送金额
      * @param from 发送地址
@@ -37,7 +39,7 @@ public interface WalletService {
     String sendTransaction(String to,BigDecimal amount,String from,String privateKey);
 
     /**
-     * 获取交易矿工费 gas费用
+     * get transaction miner fee gas cost
      * @return gas费用
      */
     GasFeeResult getMinerFee();

@@ -35,4 +35,8 @@ public class WalletResult {
      */
     private List<String> mnemonics;
 
+    public WalletResult(String address, String privateKey) {
+        this.address = address;
+        this.privateKey = privateKey;
+    }
 }
