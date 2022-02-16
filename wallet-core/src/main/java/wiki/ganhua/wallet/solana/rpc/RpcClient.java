@@ -47,10 +47,17 @@ public class RpcClient {
                 .build();
     }
 
+    /**
+     * sol rpc request
+     * @return 不验证id id验证将考虑
+     */
     public static <T> T call(RpcPar param, Class<T> clazz){
         HttpResult result = SOL_HTTP.sync("").addHeader("Content-Type", "application/json")
                 .setBodyPara(param).post();
         RpcResponse<T> rpcResponse = JSONObject.parseObject(result.getBody().toString(), new TypeReference<>(clazz) {});
+        if (!rpcResponse.getId().equals(param.getId().toString())){
+            throw new RpcException("solana error danger","the interface return ID is different from the system incoming ID");
+        }
         if (rpcResponse.getError() != null) {
             synchronized (RpcClient.class){
                 RPC_NUMBER = RpcUtil.pollingNum(RPC_NUMBER,rpcUrl.length);
