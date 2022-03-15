@@ -15,4 +15,7 @@ solana:
   rpc-url:
     - https://solana.maiziqianbao.net
     - https://api.mainnet-beta.solana.com
+ar:
+  rpc-url:
+    - https://arweave.net/
 

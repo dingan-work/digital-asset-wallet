@@ -25,6 +25,11 @@
             <groupId>com.ejlchina</groupId>
             <artifactId>okhttps-fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>9.19</version>
+        </dependency>
     </dependencies>
 
 </project>
