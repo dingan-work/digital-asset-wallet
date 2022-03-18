@@ -2,6 +2,7 @@ package wiki.ganhua.wallet.arweave;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.ListUtil;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.text.CharSequenceUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONValidator;
@@ -42,7 +43,7 @@ public class ArWalletApi{
     private static final String SC_OK_200_STR = "OK";
 
     @SneakyThrows
-    public WalletResult createWalletAddress(Integer userId) {
+    public WalletResult createWalletAddress() {
         SecureRandom sr = new SecureRandom();
         int keySize = 4096;
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
@@ -58,7 +59,7 @@ public class ArWalletApi{
     }
 
     public String sendTransaction(String toAddress, BigDecimal amount, String privateKey, String fromAddress) {
-        List<Tag> tags = ListUtil.of(new Tag("PenToken", "sendAr"), new Tag("App-Version", "2.0.5"));
+        List<Tag> tags = ListUtil.of(new Tag("Ganhua", "sendAr"), new Tag("time", DateUtil.today()));
         ArTransaction arTransaction = new ArTransaction(toAddress, amount,tags);
         arTransaction.signature(privateKey);
         String response = RpcClient.call(String.class, "/tx", HTTP.POST, BeanUtil.beanToMap(arTransaction));
