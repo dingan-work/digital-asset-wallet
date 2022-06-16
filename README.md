@@ -49,9 +49,9 @@ Thank you for your star. I will write some of my knowledge about digital wallet 
 简单示列：
 
 <div class="half" style="text-align: center;"> 
-<img src="./docs/1.jpg" width="300"/>
-<img src="./docs/2.jpg" width="300"/>
-<img src="./docs/3.jpg" width="300"/> 
+<img src="./docs/1.jpg" width="250"/>
+<img src="./docs/2.jpg" width="250"/>
+<img src="./docs/3.jpg" width="250"/> 
 </div>
 
 
