@@ -48,8 +48,11 @@ Thank you for your star. I will write some of my knowledge about digital wallet 
 ```
 简单示列：
 
-![图一](./docs/1.jpg) | ![图二](./docs/2.jpg) | ![图三](./docs/3.jpg)
----｜---｜---｜---
+<div class="half" style="text-align: center;"> 
+<img src="./docs/1.jpg" width="300"/>
+<img src="./docs/2.jpg" width="300"/>
+<img src="./docs/3.jpg" width="300"/> 
+</div>
 
 
 
