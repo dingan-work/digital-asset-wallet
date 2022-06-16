@@ -49,7 +49,7 @@ Thank you for your star. I will write some of my knowledge about digital wallet 
 简单示列：
 
 ![图一](./docs/1.jpg) | ![图二](./docs/2.jpg) | ![图三](./docs/3.jpg)
----｜---｜---
+---｜---｜---｜---
 
 
 
