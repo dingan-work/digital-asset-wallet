@@ -45,7 +45,7 @@ public class Web3jConfig {
 
         /**
          * 创建钱包地址时的 BIP-0044 类型
-         * https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+         * <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md">...</a>
          */
         private int childNumber;
     }

@@ -4,9 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameterName;
 import org.web3j.protocol.core.methods.response.EthGasPrice;
-import org.web3j.protocol.core.methods.response.EthGetBalance;
 import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
-import org.web3j.utils.Convert;
 import wiki.ganhua.exception.CommonException;
 
 import java.io.IOException;
@@ -89,5 +87,4 @@ public class Web3jCommon {
         }
         return BigDecimal.ZERO;
     }
-
 }
